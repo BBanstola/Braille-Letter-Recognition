@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class="jumbotron text-center">
+    <h1>Braille Characters</h1>
+
+    <p>Braille is a system that allows visually impaired people to read through touch using a series of raised dots on special papers which can only be read using the fingers. These dots are written using a specialized machine. <p>
+    <img src="{{ url_for('static', filename="img.jpg")}}" width="600" height="325">
+    <p>Each Braille "cell" or character consists of six dots coordinated in a rectangular shape. The rectangle consists of two columns with three dots each. In Braille system, a dot may be raised at any combination for the six positions; hence, 64 combinations are available (2^6 = 64). The Braille dot dimensions are suitable for the tactile resolution of the fingers of the reader. The inter character spaces express a word. The interior inter-areas distances are well-defined by the Library of Congress. <p>
+    <p>Approximately, the height of a dot is 0.5 mm (0.02 inches), the Horizontal Distance (HD) and Vertical Distance (VD) between the centers of the dots in a Braille cell is 2.5 mm (0.1 inches). Approximately, the distance between dots on neighboring cells is 3.75 mm (0.15 inches) horizontally (distance between horizontal (DBH)) and 5.0 mm (0.2 inches) vertically (distance between vertical (DBV)).<p>
+
+</div>
+{% endblock %}
+.

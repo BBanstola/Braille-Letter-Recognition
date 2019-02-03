@@ -1,0 +1,92 @@
+
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class="jumbotron text-center">
+
+
+
+    <h1>Braille Character Recognition</h1>
+    <p>Please enter the image file containing a braille character for the system to recognize it.<p>
+    <p></p>
+</div>
+    <br>
+
+
+    <div class="container float-middler" align="center">
+        <h3>Upload the picture </h3>
+        <br>
+
+        <div class="col-md-4">
+
+        	<form method='post' enctype='multipart/form-data' action="" >
+
+     			 <input type="file"  name="file" class="btn btn-block btn-primary" style=";border:1px solid #ff803a; border-radius:15px;display:block; margin-left:100px;width:100%;font-family:'Montserrat',Arial, Geneva, sans-serif;font-size:130%;font-weight:bold;line-height:30px;text-align:center;text-decoration:none; height:4em;-webkit-text-size-adjust:none;mso-hide:all;">
+
+
+                <br>
+
+                  <input type="submit" value="Identify" class="btn btn-block btn-primary" style=";border:1px solid #ff803a;border-radius:15px;display:block; margin-left:100px;width:100%;font-family:'Montserrat',Arial, Geneva, sans-serif;font-size:130%;font-weight:bold;line-height:30px;text-align:center;text-decoration:none; height:6em;-webkit-text-size-adjust:none;mso-hide:all;" >
+   			</form>
+
+        </div>
+
+        <div class="col-md-4" align="right">
+            <a href="{{ url_for('display')}}" style="text-decoration:none;">
+          <div class="jumbotron" STYLE=";border:1px solid #ff803a;border-radius:15px;display:block; margin-left:150px;width:140%;font-family:'Montserrat',Arial, Geneva, sans-serif;font-size:130%;font-weight:bold;line-height:30px;text-align:center;text-decoration:none; height:8em;-webkit-text-size-adjust:none;mso-hide:all;margin-top:10%"  >
+            <h3>View Image Pre-Processing Steps</h3>
+
+            </div>
+                </a>
+        </div>
+
+
+{#        <div align="right">#}
+{#        <span style="display:inline-block;">#}
+{#        <img class="manImg" src="_img.jpg">#}
+{#        <script>img { display: none; }#}
+{#        .parent:hover img { display: block; }#}
+{#        </script>#}
+{##}
+{#        </span>#}
+{##}
+{#        </div>>#}
+       {%  if img is defined %}
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+
+       <div id="image" align="center">
+{#        <img src='{{ img }}' style="height: 200px" style="width: 200px">#}
+       </div>
+       {% endif %}
+
+        {% if strings is defined %}
+       <div id=" result" align="center">
+       <h4>The corresponding english alphabet value of provided braille character is</h4>
+       <ol>
+           {% for string in strings %}
+               <ul>
+               <h1><b>{{ string}}</b></h1>
+               </ul>>
+           {% endfor %}
+       </ol>
+
+       </div>
+        {% endif %}
+
+
+
+        <br>
+        <br>
+        <div class=" clear"></div>
+   </div>
+{% endblock %}

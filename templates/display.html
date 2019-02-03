@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Segmented Images</title>
+    <script language="JavaScript">
+        window.onload = function() {
+        if (!window.location.hash) {
+        window.location = window.location + '#loaded';
+        window.location.reload();
+    }
+
+}
+    </script>
+
+</head>
+{% extends 'layout.html' %}
+
+{% block body %}
+    <div style="width: 600px; float: left;">
+{#        <h3 style="color: #ff7e50">Croped Image: </h3>#}
+{#        <img src='crop.png' style="height: 70px;width: 150px">#}
+{#        </br> </br>#}
+    <h3 style="color: #ff7e50">Adaptive Mean Thresholding: </h3>
+        <img src='adaptive_mean_thresh.png' style="height: 84px;width: 60px">
+        </br>
+    <h3 style="color: #ff7e50">Adaptive GaussianThresholding: </h3>
+        <img src='adaptive_thresh_gaussian.png' style="height: 84px;width: 60px">
+        </br>
+    <h3 style="color: #ff7e50">Global Thresholding: </h3>
+        <img src='global_thresh.png' style="height: 84px;width: 60px">
+        </br>
+        <h3 style="color: #ff7e50">Median Filtered Image: </h3>
+        <img src='median_blurred.png' style="height: 84px;width: 60px">
+        </br>
+<br><br>
+    </div>
+
+    <div style="float: right; width: 400px">
+        <h3 style="color: #ff7e50">Original Image </h3>
+        <img src='original.png' style="height: 84px;width: 60px">
+        </br>
+        <h3 style="color: #ff7e50">Binary Converted image </h3>
+        <img src='out.bmp' style="height: 84px;width: 60px">
+        </br>
+        <h3 style="color: #ff7e50">Image after Binary Inversion </h3>
+        <img src='inverted.png' style="height: 84px;width: 60px">
+        </br>
+        <h3 style="color: #ff7e50">Final Image to be feeded in NN </h3>
+        <img src='inverted.png' style="height: 84px;width: 60px">
+    <br><br><br>
+    </div>
+
+
+{% endblock %}
+
+</html>
