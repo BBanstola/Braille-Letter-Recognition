@@ -6,3 +6,4 @@ These are the letters and special characters for which the program is trained fo
 
 Accuracy of ~90% was achieved while testing.
 
+
