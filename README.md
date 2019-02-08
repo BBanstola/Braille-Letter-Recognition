@@ -4,6 +4,8 @@ The program is trained with the help of a CSV format training set.
 
 These are the letters and special characters for which the program is trained for. The numbers they are mapped are as represented accordingly in the training and testing sets.
 
+Back Propagation Algorithm was used to detect the the letters.  
+
 Accuracy of ~90% was achieved while testing.
 
 
